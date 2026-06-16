@@ -1,0 +1,78 @@
+/* Планшеты и небольшие ноутбуки (до 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        width: 95%;
+        padding: 0 15px;
+    }
+    
+    .quote-wrapper {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .quote-text blockquote {
+        border-left: none;
+        border-top: 5px solid #D4B68B;
+        padding: 20px 0 0 0;
+    }
+}
+
+/* Смартфоны (до 768px) */
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 40px 0 !important;
+    }
+
+    h1 { font-size: 28px !important; }
+    h2 { font-size: 24px !important; }
+
+    
+    .stats-stepper, .stats-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center;
+        gap: 20px;
+    }
+
+    
+    .benefits-grid, .types-grid, .projects-mini-grid, .contacts-grid {
+        grid-template-columns: 1fr !important;
+        display: grid !important;
+        gap: 20px;
+    }
+
+    
+    .licenses-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        display: grid !important;
+        gap: 15px !important;
+    }
+
+    .license-item img {
+        height: 250px !important; 
+        object-fit: contain !important;
+    }
+}
+
+/* Маленькие телефоны (до 480px) */
+@media (max-width: 480px) {
+    /* Лицензии в один столбец для читаемости */
+    .licenses-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .license-item img {
+        height: auto !important;
+    }
+
+    .hero-mini h1 {
+        font-size: 22px !important;
+    }
+
+    /* Кнопки и ссылки */
+    .gold-link {
+        display: block;
+        text-align: center;
+    }
+}

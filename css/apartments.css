@@ -1,0 +1,242 @@
+.apartments-page {
+    background-color: var(--ivory);
+    padding: 60px 0 100px;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--emerald);
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.page-title span {
+    color: var(--gold);
+}
+
+/* ФИЛЬТР */
+.filter-wrapper {
+    background: #fff;
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 60px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+}
+
+.filter-row {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.filter-group {
+    flex: 1;
+}
+
+.filter-group label {
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+    display: block;
+    color: var(--emerald);
+    text-transform: uppercase;
+}
+
+/* Поля ввода руками */
+.manual-inputs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.manual-inputs input {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    outline: none;
+}
+
+/* Двойной слайдер */
+.range-slider-container {
+    position: relative;
+    height: 20px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.range-slider-container input[type="range"] {
+    position: absolute;
+    width: 100%;
+    background: none;
+    pointer-events: none;
+    -webkit-appearance: none;
+    appearance: none;
+    z-index: 2;
+    top: 0;
+    outline: none;
+}
+
+.range-slider-container input[type="range"]::-webkit-slider-thumb {
+    pointer-events: auto;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    background: var(--emerald);
+    border-radius: 50%;
+    border: 2px solid #fff;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.slider-track {
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #e9ecef;
+    top: 7px;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+/* Кнопки комнат */
+.rooms-selector {
+    display: flex;
+    gap: 8px;
+}
+
+.room-btn {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #ced4da;
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.room-btn.active {
+    background: var(--emerald) !important;
+    color: var(--gold) !important;
+    border-color: var(--emerald) !important;
+}
+
+/* Поиск и карточки */
+.bottom-row {
+    margin-top: 40px;
+    align-items: center;
+}
+
+.search-input {
+    flex: 3;
+}
+
+.search-input input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.sort-select {
+    flex: 1;
+}
+
+.sort-select select {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.apartments-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.apartment-card {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    padding: 20px;
+    transition: 0.3s;
+    position: relative;
+}
+
+.apartment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.ap-img {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.ap-img img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.ap-type {
+    color: var(--emerald);
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.ap-price {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.btn-load-more {
+    background: #D4B68B;
+    color: #fff;
+    border: none;
+    padding: 15px 50px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 40px;
+}
+
+/* Центрируем контейнер кнопки */
+.load-more-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    width: 100%;
+}
+
+/* Стили для самой кнопки */
+.btn-load-more {
+    background-color: #D4B68B; /* Золотисто-бежевый */
+    color: #fff;
+    padding: 15px 50px;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Эффект при наведении */
+.btn-load-more:hover {
+    background-color: #1b4332; /* Твой изумрудный */
+    transform: translateY(-2px);
+}

@@ -1,0 +1,145 @@
+/* --- СТРАНИЦА КОНТАКТОВ --- */
+.contacts-page {
+    padding: 40px 0 80px;
+    background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Заголовок */
+.contacts-page h1 {
+    font-size: 36px;
+    color: #1B4332;
+    /* Темно-зеленый Созидание */
+    font-weight: 800;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+/* Сетка карточек */
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.contact-card {
+    border: 1px solid #E0E4E8;
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.contact-card:hover {
+    border-color: #D4B68B;
+    /* Золотой при наведении */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Иконки */
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #F1F3F5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.contact-icon img {
+    width: 22px;
+    height: 22px;
+    /* Окрашиваем иконки в зеленый через фильтр */
+    filter: invert(19%) sepia(18%) saturate(1633%) hue-rotate(105deg) brightness(95%) contrast(93%);
+}
+
+/* Тексты */
+.contact-info a,
+.contact-info p {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color: #1B4332;
+    text-decoration: none;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.contact-info .label {
+    font-size: 11px;
+    color: #999;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 5px;
+    display: block;
+}
+
+.gold-link {
+    color: #D4B68B !important;
+    /* Золотой для WhatsApp */
+}
+
+/* Секция с картой */
+.map-container {
+    width: 100%;
+    height: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #E0E4E8;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Адаптивность */
+@media (max-width: 1100px) {
+    .contacts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .contacts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contacts-page h1 {
+        font-size: 28px;
+    }
+}
+
+/* Общий класс для иконок contacts.php */
+.svg-icon {
+    width: 22px;
+    height: 22px;
+    fill: #1B4332;
+    /* Фирменный темно-зеленый */
+    transition: all 0.3s ease;
+}
+
+/* Изменяем цвет при наведении на карточку */
+.contact-card:hover .svg-icon {
+    fill: #D4B68B;
+    /* Золотой при наведении */
+}
+
+/* WhatsApp иконка - по умолчанию золотая */
+.contact-card:last-child .svg-icon {
+    fill: #D4B68B;
+}
+
+/* Ховер для WhatsApp - становится темно-зеленой */
+.contact-card:last-child:hover .svg-icon {
+    fill: #1B4332;
+}

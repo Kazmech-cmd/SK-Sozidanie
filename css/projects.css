@@ -1,0 +1,225 @@
+/* --- ОБЩИЕ НАСТРОЙКИ СТРАНИЦЫ --- */
+.container {
+    max-width: 1200px; /* Ограничиваем ширину, чтобы не растягивалось на весь экран */
+    margin: 0 auto;    /* Центрируем по середине */
+    padding: 0 50px;   /* Отступы от краев (воздух по бокам) */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.catalog-page {
+    background-color: var(--ivory);
+    /* Твой фирменный фон */
+    padding-bottom: 120px;
+}
+
+/* ШАПКА КАТАЛОГА */
+.catalog-hero {
+    background-color: var(--emerald);
+    /* Темно-зеленый из хедера */
+    padding: 100px 0 60px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.catalog-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    color: var(--gold);
+    /* Золотой заголовок */
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+/* ТАБЫ ГОРОДОВ */
+.city-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 60px;
+}
+
+.tab-btn {
+    background: var(--white);
+    border: 1px solid rgba(27, 67, 50, 0.2);
+    color: var(--emerald);
+    padding: 12px 35px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+    background-color: var(--emerald);
+    color: var(--gold);
+    border-color: var(--emerald);
+}
+
+/* СЕТКА ПРОЕКТОВ */
+.projects-grid.active {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 60px; /* Увеличиваем расстояние между карточками */
+}
+
+.projects-grid {
+    display: none;
+    /* Скрыто до переключения JS */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.projects-grid.active {
+    display: grid;
+}
+
+/* КАРТОЧКА ПРОЕКТА */
+.project-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+    transition: 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* ИЗОБРАЖЕНИЕ И ПЛАШКИ */
+.card-img-wrap {
+    position: relative;
+    height: 250px; /* Уменьшили с 320px до 250px */
+    overflow: hidden;
+}
+
+.card-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.project-card:hover .card-img-wrap img {
+    transform: scale(1.08);
+}
+
+.card-badges {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.badge.status {
+    background: var(--white);
+    color: var(--emerald);
+}
+
+.badge.promo {
+    background: var(--gold);
+    color: var(--emerald);
+}
+
+.badge.status.build {
+    color: #8F6D00;
+}
+
+/* Цвет для стройки */
+
+.card-price {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(27, 67, 50, 0.85);
+    color: var(--white);
+    padding: 8px 15px;
+    font-weight: 600;
+    backdrop-filter: blur(5px);
+}
+
+/* ТЕКСТОВАЯ ЧАСТЬ КАРТОЧКИ */
+.card-body {
+    padding: 25px; /* Уменьшили с 35px до 25px */
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.card-body h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem; /* Уменьшили шрифт заголовка */
+    color: var(--emerald);
+    text-transform: uppercase;
+}
+
+.card-discount {
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: 1px dashed var(--gold);
+    padding: 3px 8px;
+}
+
+.card-address {
+    font-size: 0.8rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.card-desc {
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* АДАПТИВ */
+@media (max-width: 992px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .catalog-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* Базовая логика прижатия футера */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto; /* Позволяет контенту расти и занимать всё место до футера */
+}
+
+footer {
+    flex: 0 0 auto; /* Футер всегда сохраняет свой размер и остается внизу */
+}

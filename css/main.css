@@ -1,0 +1,19 @@
+/* Переменные и сброс */
+:root {
+    --emerald: #1b4332;      /* Твой новый зеленый */
+    --emerald-dark: #015D1A; /* Для эффектов при наведении */
+    --gold: #D4AF37;
+    --gold-light: #F1D592;
+    --ivory: #FDFCF0;
+    --white: #FFFFFF;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: var(--ivory);
+    font-family: 'Georgia', serif;
+    color: var(--emerald);
+    line-height: 1.6;
+}
+

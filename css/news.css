@@ -1,0 +1,174 @@
+/* --- СТИЛИ СТРАНИЦЫ НОВОСТЕЙ (news.css) --- */
+
+.news-page {
+    padding: 60px 0;
+    background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    /* Единый шрифт для заголовков и текста */
+}
+
+/* Хлебные крошки */
+.breadcrumbs {
+    font-size: 11px;
+    color: #999;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.breadcrumbs a {
+    color: #999;
+    text-decoration: none;
+}
+
+/* Заголовок страницы */
+.news-page h1 {
+    font-size: 36px;
+    color: #1B4332;
+    /* Темно-зеленый из брендбука */
+    font-weight: 800;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+/* Сетка карточек */
+.news-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.news-card {
+    flex: 0 0 calc(50% - 15px);
+    /* Две колонки */
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Контейнер для фото с ограничением высоты */
+.news-img-wrap {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.news-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Круглый значок акции (Badge) */
+.promo-badge {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 110px;
+    height: 110px;
+    background-color: #D4B68B;
+    /* Золотой акцент */
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #1B4332;
+    border: 1px dashed #1B4332;
+    z-index: 2;
+}
+
+.promo-badge span {
+    font-size: 7px;
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+    padding: 0 10px;
+}
+
+.promo-badge .percent {
+    font-size: 32px;
+    font-weight: 900;
+    margin: 2px 0;
+}
+
+/* Текстовый контент карточки */
+.news-category {
+    color: #D4B68B;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.news-content h3 {
+    font-size: 19px;
+    color: #1B4332;
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1.4;
+    min-height: 52px;
+    /* Чтобы кнопки были на одном уровне */
+}
+
+/* Кнопка "Узнать подробнее" */
+.btn-more {
+    display: inline-block;
+    background-color: #D4B68B;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+    width: fit-content;
+}
+
+.btn-more:hover {
+    background-color: #bca17a;
+}
+
+/* Адаптивность для планшетов и телефонов */
+@media (max-width: 992px) {
+    .news-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .news-img-wrap {
+        height: 300px;
+    }
+}
+
+/* Устанавливаем высоту для всей страницы */
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Создаем флекс-контейнер на всю высоту */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Основной контент (main) забирает всё свободное пространство */
+main {
+    flex: 1 0 auto;
+}
+
+/* Подвал всегда остается внизу, не сжимаясь */
+.main-footer {
+    flex-shrink: 0;
+    background-color: #1B4332;
+    /* Твой фирменный цвет */
+}

@@ -1,0 +1,145 @@
+/* Общие настройки */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.admin-box {
+    background: #fff;
+    width: 90%;
+    max-width: 650px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+}
+
+/* Шапка админки */
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.admin-header h2 {
+    margin: 0;
+    color: #333;
+}
+
+.logout-btn {
+    text-decoration: none;
+    color: #ff4d4d;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Вкладки */
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    background: #eee;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.tabs a {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    color: #666;
+    padding: 10px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+    font-weight: 600;
+}
+
+.tabs a.active {
+    background: #D4B68B;
+    /* Твой фирменный песочный/золотой */
+    color: white;
+}
+
+/* Формы */
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    box-sizing: border-box;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #D4B68B;
+}
+
+.file-input {
+    margin: 10px 0 20px;
+    padding: 15px;
+    background: #fafafa;
+    border-radius: 8px;
+    border: 1px dashed #ccc;
+}
+
+.file-input label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #777;
+}
+
+/* Кнопка */
+button {
+    background: #004d43;
+    /* Твой изумрудный */
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #00362f;
+    transform: translateY(-2px);
+}
+
+/* Сообщения */
+.msg {
+    background: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.admin-footer {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.admin-footer a {
+    color: #999;
+    text-decoration: none;
+    font-size: 14px;
+}

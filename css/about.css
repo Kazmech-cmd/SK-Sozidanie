@@ -1,0 +1,146 @@
+/* --- Специфические стили страницы О КОМПАНИИ --- */
+
+/* Малый Hero-блок (Верхняя плашка) */
+.hero-mini {
+    background: #1B4332; /* Твой фирменный темно-зеленый */
+    padding: 80px 0 60px;
+    color: #fff;
+    border-bottom: 4px solid #D4B68B; /* Тонкая золотая линия для акцента */
+}
+
+.hero-mini h1 {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.hero-mini h1 span {
+    color: #D4B68B; /* Твой золотой из макета */
+    display: block;
+}
+
+/* Блок цитаты директора */
+.quote-section {
+    background: linear-gradient(rgba(27, 67, 50, 0.94), rgba(27, 67, 50, 0.94)), 
+                url('../img/comm-hero.jpg') center/cover no-repeat;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.quote-wrapper {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.quote-text blockquote {
+    font-size: 26px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #fff;
+    border-left: 5px solid #D4B68B;
+    padding-left: 35px;
+    margin: 0;
+}
+
+.quote-author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.author-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #D4B68B;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.author-info h4 {
+    font-size: 20px;
+    color: #D4B68B;
+    margin-bottom: 5px;
+}
+
+.author-info p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Сетка лицензий и документов */
+.licenses-grid {
+    display: grid;
+    /* Создаем 4 колонки одинаковой ширины */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;
+    margin-top: 40px;
+    align-items: start;
+}
+
+.license-item {
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: block;
+    /* Убираем наложение */
+    overflow: hidden; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.license-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    border-color: #D4B68B;
+}
+
+.license-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+}
+
+/* Настройка компактных проектов для этой страницы */
+.projects-mini-grid {
+    margin-top: 40px;
+}
+
+.project-small .type-img {
+    height: 200px; /* Делаем чуть меньше, чем на главной */
+    transition: transform 0.5s ease;
+}
+
+.project-small:hover .type-img img {
+    transform: scale(1.1);
+}
+
+/* Оформление заголовков секций */
+.section-label {
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #D4B68B;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 992px) {
+    .licenses-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .licenses-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,164 @@
+/* --- СТИЛИ СТРАНИЦЫ СПОСОБОВ ПОКУПКИ (pay.css) --- */
+
+.purchase-page {
+    padding: 60px 0;
+    background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Заголовок и навигация */
+.purchase-page h1 {
+    font-size: 36px;
+    color: #1B4332; /* Твой темно-зеленый */
+    font-weight: 800;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+/* Секции с контентом */
+.purchase-section {
+    padding: 80px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Чередование фона для визуального разделения */
+.purchase-section:nth-child(even) {
+    background-color: #fcfcfc;
+}
+
+.purchase-flex {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+/* Реверс для каждого второго блока */
+.purchase-section:nth-child(even) .purchase-flex {
+    flex-direction: row-reverse;
+}
+
+/* Текстовый блок */
+.purchase-info {
+    flex: 1;
+}
+
+.section-tag {
+    color: #D4B68B; /* Золотой акцент */
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.purchase-info h2 {
+    color: #1B4332;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.purchase-info p {
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+/* Списки преимуществ */
+.purchase-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.purchase-list li {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #1B4332;
+    font-size: 15px;
+}
+
+.purchase-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 12px;
+    height: 2px;
+    background-color: #D4B68B; /* Золотое тире */
+}
+
+/* Акценты с цифрами (как в рассрочке) */
+.purchase-stats {
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.p-num {
+    display: block;
+    font-size: 48px;
+    font-weight: 900;
+    color: #D4B68B;
+    font-family: 'Playfair Display', serif; /* Шрифт как в статистике на главной */
+    line-height: 1;
+}
+
+.p-txt {
+    font-size: 12px;
+    color: #1B4332;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Изображения */
+.purchase-visual {
+    flex: 1;
+}
+
+.purchase-visual img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(27, 67, 50, 0.1); /* Легкая тень в цвет бренда */
+}
+
+/* Кнопка */
+.btn-gold-outline {
+    display: inline-block;
+    border: 2px solid #D4B68B;
+    color: #1B4332;
+    padding: 15px 35px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn-gold-outline:hover {
+    background-color: #D4B68B;
+    color: #fff;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 992px) {
+    .purchase-flex, 
+    .purchase-section:nth-child(even) .purchase-flex {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .purchase-info {
+        text-align: center;
+    }
+    .purchase-list li {
+        text-align: left;
+    }
+    .purchase-stats {
+        justify-content: center;
+    }
+}

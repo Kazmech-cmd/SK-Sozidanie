@@ -1,0 +1,166 @@
+/* --- 1. СЛАЙДЕР (SWIPER) --- */
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-color: #1B4332;
+    /* Фирменный зеленый */
+    overflow: hidden;
+}
+
+.swiper,
+.swiper-wrapper,
+.swiper-slide {
+    height: 100%;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.slide-container {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 1250px !important;
+    margin: 0 auto !important;
+    padding: 0 50px !important;
+    box-sizing: border-box !important;
+    height: 100% !important;
+}
+
+.slide-top-left {
+    align-self: center !important;
+    text-align: left !important;
+    flex: 1 !important;
+}
+
+.slide-tag {
+    color: #D4B68B;
+    /* Золотой акцент */
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.slide-top-left h2 {
+    color: #D4B68B;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.slide-stats-right {
+    flex: 1 !important;
+    text-align: right !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+}
+
+.ms-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    color: #D4B68B;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.ms-desc {
+    font-size: 0.85rem;
+    color: #D4B68B;
+    max-width: 250px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+/* --- 2. СТАТИСТИКА (ВЫСЛУГА КОМПАНИИ) --- */
+.stats-section {
+    position: relative;
+    z-index: 99;
+    margin-top: -80px;
+    /* Наплыв на слайдер */
+    padding: 0 20px;
+}
+
+.stats-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.stat-item {
+    text-align: center;
+    flex: 1;
+}
+
+.stat-num {
+    display: block;
+    font-size: 3rem;
+    color: #1B4332;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.stat-text {
+    display: block;
+    font-size: 0.75rem;
+    color: #D4B68B;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- 3. КАРТА --- */
+.map-section {
+    padding-top: 60px;
+    margin-bottom: 50px; /* Добавляем реальный отступ от футера */
+    background-color: #fff;
+}
+
+.section-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #1B4332;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.map-container {
+    width: 100%;
+    height: 450px;
+    position: relative;
+    border-bottom: 2px solid #D4B68B; /* Золотистая полоска-разделитель */
+}
+
+.map-container iframe {
+    display: block;
+}
+
+/* --- 4. АЛЕРТЫ СТАТУСА --- */
+.status-alert {
+    padding: 20px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.status-alert.success {
+    background: #D4B68B;
+    color: #fff;
+}
